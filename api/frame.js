@@ -7,7 +7,7 @@ export default function handler(req, res) {
         <meta property="fc:frame:image" content="https://i.imgur.com/p8n2193.png" />
         <meta property="fc:frame:input:text" content="Share your best memory of 2025..." />
         <meta property="fc:frame:button:1" content="Generate Image" />
-        <meta property="fc:frame:post_url" content="https://diaryapp.vercel.app/api/image" />
+        <meta property="fc:frame:post_url" content="https://diaryapp-beta.vercel.app/api/image" />
       </head>
       <body>
           <h1>diaryapp</h1>
