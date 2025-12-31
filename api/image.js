@@ -7,8 +7,14 @@ export default async function handler(req, res) {
       return res.status(405).send('Method Not Allowed');
     }
 
-    // --- این خط کد، مشکل را حل می‌کند ---
-    const body = await req.json();
+    let body;
+    try {
+      // --- این بخش تغییر کرده تا درخواست‌های خالی را مدیریت کند ---
+      body = await req.json();
+    } catch (e) {
+      // اگر بدنه خالی بود یا JSON نبود، خطا را نادیده می‌گیریم
+      body = {}; 
+    }
 
     const memoryText = body?.untrustedData?.inputText || "No memory shared!";
     const imageUrl = `https://og.onceupon.gg/card?text=${encodeURIComponent(memoryText)}`;
