@@ -8,8 +8,8 @@
 - [x] Delete diary entries
 
 ## Version 1.1
-- [ ] Search entries
-- [ ] Tag support
+- [x] Search entries
+- [x] Tag support
 - [ ] Dark mode
 - [ ] Export to PDF
 
